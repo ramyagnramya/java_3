@@ -1,0 +1,84 @@
+package week7;
+import java.lang.String;
+import java.lang.StringBuffer;
+public class StringDemo 
+{
+	public static void main(String args[]) 
+	{
+		System.out.println("This Code illustrates the use of String class and its methods");
+        System.out.println("*************************************************************************************");
+        
+        String str =("Train your Mind to see the Good in Everything.");
+        
+        System.out.println("The initial String is:\t" + str);
+        System.out.println("After replacing 'o' with 'O':\t" + str.replace('o', 'O'));
+        System.out.println(str);
+        System.out.println("The length of the given string is:\t" + str.length());
+        System.out.println("The occurrence of character 'G' is at position:\t" + str.indexOf('G'));
+        System.out.println("The lower case of String is:\t" + str.toLowerCase());
+        System.out.println("The upper case of String is:\t" + str.toUpperCase());
+        System.out.println("The Extracted sub String is:\t" + str.substring(27));
+        
+        String s = "        Hello World        ";
+        
+        System.out.println("The String with spaces: " + s);
+        System.out.println("The String with leading & trailing spaces:\t" + s);
+        System.out.println("The String without spaces: " + s.trim());
+        
+        if (s.isEmpty())
+            System.out.println("The String is Empty");
+        else
+            System.out.println("The String is not empty. It contains " + s);
+        
+        s = null;
+        
+        System.out.println("The String after modifying...\t" + s);
+        System.out.println("*************************************************************************************\n");
+        
+        System.out.println("This Code illustrates the use of StringBuffer class and its methods");
+        System.out.println("*************************************************************************************");
+        
+        StringBuffer strbuf = new StringBuffer();
+        
+        System.out.println("The initial capacity of StringBuffer is " + strbuf.capacity());
+        
+        strbuf.append("Hello");
+        
+        System.out.println("The StringBuffer is:\t" + strbuf);
+        
+        strbuf.setLength(20);
+        strbuf.insert(5, " welcome to the world of Java");
+        
+        System.out.println("The StringBuffer is:\t" + strbuf);
+        
+        System.out.println("The capacity of StringBuffer after appending " + strbuf.capacity());
+        
+        System.out.println("The Reverse of the given StringBuffer is:\n" + strbuf.reverse());
+        
+        System.out.println("The StringBuffer after deleting\t" + strbuf.delete(5, 43));
+        
+    }
+}
+OUTPUT:-
+This Code illustrates the use of String class and its methods
+*************************************************************************************
+The initial String is:	Train your Mind to see the Good in Everything.
+After replacing 'o' with 'O':	Train yOur Mind tO see the GOOd in Everything.
+Train your Mind to see the Good in Everything.
+The length of the given string is:	46
+The occurrence of character 'G' is at position:	27
+The lower case of String is:	train your mind to see the good in everything.
+The upper case of String is:	TRAIN YOUR MIND TO SEE THE GOOD IN EVERYTHING.
+The Extracted sub String is:	Good in Everything.
+The String with spaces:         Hello World        
+The String with leading & trailing spaces:	        Hello World        
+The String without spaces: Hello World
+The String is not empty. It contains         Hello World        
+The String after modifying...	null
+*************************************************************************************
+
+This Code illustrates the use of StringBuffer class and its methods
+*************************************************************************************
+The initial capacity of StringBuffer is 16
+The StringBuffer is:	Hello
+The StringBuffer is:	Hello welcome to the world of Java
