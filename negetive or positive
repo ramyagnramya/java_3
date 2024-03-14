@@ -1,0 +1,23 @@
+public class PositiveOrNegetive {
+	public static void main(String args[])
+	{
+		int num=912;
+		if(num>0)
+		{
+			System.out.println("enter positive number or negative");
+	  }
+    else if
+    {
+        System.out.pintln("the given number is positive")
+	  }
+		else 
+		{
+			System.out.println("the given number is zero");
+		}
+	
+}
+output:-
+
+enter positive number or nagative
+567
+the given number is positive
