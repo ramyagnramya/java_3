@@ -1,0 +1,71 @@
+package week3;
+import java.util.Scanner;
+public class Ticket {
+    private int ticketNumber;
+    private String passengerName;
+    private String destination;
+    private double price;
+    public Ticket(int ticketNumber, String passengerName, String destination, double price) {
+        this.ticketNumber = ticketNumber;
+        this.passengerName = passengerName;
+        this.destination = destination;
+        this.price = price;
+    }
+    public int getTicketNumber() {
+        return ticketNumber;
+    }
+    public void setTicketNumber(int ticketNumber) {
+        this.ticketNumber = ticketNumber;
+    }
+    public String getPassengerName() {
+        return passengerName;
+    }
+    public void setPassengerName(String passengerName) {
+        this.passengerName = passengerName;
+    }
+    public String getDestination() {
+        return destination;
+    }
+    public void setDestination(String destination) {
+        this.destination = destination;
+    }
+    public double getPrice() {
+        return price;
+    }
+    public void setPrice(double price) {
+        this.price = price;
+    }
+    public void printTicketDetails() {
+        System.out.println("Ticket Number: " + ticketNumber);
+        System.out.println("Passenger Name: " + passengerName);
+        System.out.println("Destination: " + destination);
+        System.out.println("Price: $" + price);
+    }
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter Ticket Number: ");
+        int ticketNumber = scanner.nextInt();
+        scanner.nextLine(); 
+        System.out.print("Enter Passenger Name: ");
+        String passengerName = scanner.nextLine();
+        System.out.print("Enter Destination: ");
+        String destination = scanner.nextLine();
+        System.out.print("Enter Price: ");
+        double price = scanner.nextDouble();
+        Ticket ticket = new Ticket(ticketNumber, passengerName, destination, price);
+        System.out.println("\nTicket Details:");
+        ticket.printTicketDetails();
+        scanner.close();
+    }
+}
+OUTPUT:-
+Enter Ticket Number: 23
+Enter Passenger Name: Raju
+Enter Destination: koppal
+Enter Price: 750
+
+Ticket Details:
+Ticket Number: 23
+Passenger Name: Raju
+Destination: koppal
+Price: $750.0
